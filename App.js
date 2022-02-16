@@ -6,7 +6,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './screen/Login';
 import Verify from './screen/Verify';
 import Splash from './Splash';
-import Home from './screen/Home';
+import TabScreen from './screen/TabScreen';
+import Frame from './screen/Frame';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +18,8 @@ const App = () => {
         <Stack.Screen name='Splash' component={Splash} options={{headerShown:false}} />
         <Stack.Screen name='login' component={Login} options={{headerShown:false}}/>
         <Stack.Screen name='verify' component={Verify} options={{headerShown:false}}/>
-        <Stack.Screen name='home' component={Home} options={{headerShown:false}}/>
+        <Stack.Screen name='home' component={TabScreen} options={{headerShown:false}}/>
+        <Stack.Screen name='frame' component={Frame} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
