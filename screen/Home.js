@@ -4,54 +4,39 @@ import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-nati
 import Flatlist from '../components/Flatlist';
 import Model from '../components/Model';
 import { img } from '../utils/Imgdata';
-// const data = [{
-//   id :1 ,
-//   imgurl :""
-// }, {
 
-// }]
 
-const Home = () => {
-//   const renderItem = ({ item }) => {
-//     return (
-//         <TouchableOpacity style={styles.Grig} onPress= {()=> navigation.navigate('sss', {
-//           params : {
-//             id : 
-//           }
-//         })}>
-//             <Image style={styles.tinyLogo} source={{ uri:item.img}} />
-//         </TouchableOpacity>
-//     );
-// };
+const Home = (props) => {
+
   return (
     <ScrollView>
       <View>
         {/* <Text>Home</Text> */}
         <Model />
-        {/* <Flatlist data={img.image} header={img.header} /> */}
-        <Flatlist data={img.image1} header={img.header1} />
-        <Flatlist data={img.image2} header={img.header2} />
-        <Flatlist data={img.image3} header={img.header3} />
-        <Flatlist data={img.image4} header={img.header4} />
-        <Flatlist data={img.image5} header={img.header5} />
-        <Flatlist data={img.image6} header={img.header6} />
-        <Flatlist data={img.image7} header={img.header7} />
-        <Flatlist data={img.image8} header={img.header8} />
-        <Flatlist data={img.image9} header={img.header9} />
-        <Flatlist data={img.image10} header={img.header10} />
-        <Flatlist data={img.image11} header={img.header11} />
-        <Flatlist data={img.image12} header={img.header12} />
-        <Flatlist data={img.image13} header={img.header13} />
-        <Flatlist data={img.image14} header={img.header14} />
-        <Flatlist data={img.image15} header={img.header15} />
-        <Flatlist data={img.image16} header={img.header16} />
-        <Flatlist data={img.image17} header={img.header17} />
-        <Flatlist data={img.image18} header={img.header18} />
-        <Flatlist data={img.image19} header={img.header19} />
-        <Flatlist data={img.image20} header={img.header20} />
-        <Flatlist data={img.image21} header={img.header21} />
-        <Flatlist data={img.image22} header={img.header22} />
-        <Flatlist data={img.image23} header={img.header23} />
+        {/* <Flatlist data={img.image} header={img.header} {...props}/> */}
+        <Flatlist data={img.image1} header={img.header1} {...props} />
+        <Flatlist data={img.image2} header={img.header2} {...props}/>
+        <Flatlist data={img.image3} header={img.header3} {...props}/>
+        <Flatlist data={img.image4} header={img.header4} {...props}/>
+        <Flatlist data={img.image5} header={img.header5} {...props}/>
+        <Flatlist data={img.image6} header={img.header6} {...props}/>
+        <Flatlist data={img.image7} header={img.header7} {...props}/>
+        <Flatlist data={img.image8} header={img.header8} {...props}/>
+        <Flatlist data={img.image9} header={img.header9} {...props}/>
+        <Flatlist data={img.image10} header={img.header10} {...props}/>
+        <Flatlist data={img.image11} header={img.header11} {...props}/>
+        <Flatlist data={img.image12} header={img.header12} {...props}/>
+        <Flatlist data={img.image13} header={img.header13} {...props}/>
+        <Flatlist data={img.image14} header={img.header14} {...props}/>
+        <Flatlist data={img.image15} header={img.header15} {...props}/>
+        <Flatlist data={img.image16} header={img.header16} {...props}/>
+        <Flatlist data={img.image17} header={img.header17} {...props}/>
+        <Flatlist data={img.image18} header={img.header18} {...props}/>
+        <Flatlist data={img.image19} header={img.header19} {...props}/>
+        <Flatlist data={img.image20} header={img.header20} {...props}/>
+        <Flatlist data={img.image21} header={img.header21} {...props}/>
+        <Flatlist data={img.image22} header={img.header22} {...props}/>
+        <Flatlist data={img.image23} header={img.header23} {...props}/>
       </View>
     </ScrollView>
   );

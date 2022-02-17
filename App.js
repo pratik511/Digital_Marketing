@@ -19,7 +19,6 @@ const App = () => {
         <Stack.Screen name='login' component={Login} options={{headerShown:false}}/>
         <Stack.Screen name='verify' component={Verify} options={{headerShown:false}}/>
         <Stack.Screen name='home' component={TabScreen} options={{headerShown:false}}/>
-        <Stack.Screen name='frame' component={Frame} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

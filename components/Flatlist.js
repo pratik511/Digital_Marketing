@@ -3,14 +3,13 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
 import { img } from '../utils/Imgdata';
 
-const Flatlist = (props ,{navigation}) => {
+const Flatlist = (props) => {
     const { data, header } = props;
-    // const {id} = route.params.id;
-    // const {img} = route.params.img;
+    // console.warn(props);
     const renderItem = ({ item }) => {
         return (
             <View style={styles.Grig}>
-                <TouchableOpacity onPress={() => navigation.navigate('frame',{id:item.id ,img:item.img})}>
+                <TouchableOpacity onPress={() => props.navigation.navigate('Frame',{id:item.id ,img:item.img})}>
                     <Image style={styles.tinyLogo} source={{ uri: item.img }} />
                 </TouchableOpacity>
             </View>
