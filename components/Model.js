@@ -3,13 +3,11 @@ import React, { useState } from 'react';
 import { Modal, StyleSheet, Text, TouchableOpacity, View, Dimensions, Image } from 'react-native';
 import { Icon } from 'react-native-vector-icons/Ionicons';
 import colors from '../utils/colors';
-import Lable from './Lable';
 
 const { width } = Dimensions.get('window');
 const height = width * 0.50;
 
 const Model = (props) => {
-    const { txt} = props;
     const [model, setModel] = useState(false);
     return (
         <View>
@@ -26,7 +24,6 @@ const Model = (props) => {
                             <Text style={{ fontSize: 17, color:colors.black, fontWeight: '900' }}>NO INTERNET</Text>
                         </View>
                         <View style={{ marginBottom: height * 0.06 }}>
-                            {/* <Lable style={{textAlign: 'center'}} txt="aaa"></Lable> */}
                             <Text style={{ fontSize: 14, textAlign: 'center', color: '#0f0f0f', fontWeight: '100' }}>Check your internet connection and try again.</Text>
                         </View>
                         <View style={{ alignItems: 'center', marginBottom: height * 0.04 }}>
@@ -46,7 +43,7 @@ const Model = (props) => {
             </Modal>
             <View>
                 <TouchableOpacity onPress={() => setModel(!model)}>
-                    <Text>Show</Text>
+                    <Text style={{color:colors.white}}>Show</Text>
                 </TouchableOpacity>
             </View>
         </View>

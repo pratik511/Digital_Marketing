@@ -6,7 +6,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../utils/colors';
 import Lable from '../utils/Lable';
-import Frame from './Frame';
 import Home from './Home';
 
 function HomeScreen() {
@@ -27,11 +26,11 @@ function SettingsScreen() {
 
 const Stack = createNativeStackNavigator();
 
+
 function HomeStackScreen() {
   return (
     <Stack.Navigator>
-     <Stack.Screen name="Home" component={Home} options={{headerRight:((color) => <Icon name="server-outline" size={23} style={{ color: color,right:15 }} />) }} />
-     <Stack.Screen name="Frame" component={Frame} options={{title:'Edit Frame' ,tabBarVisible: false}} />
+     <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
     </Stack.Navigator>
    );
  }

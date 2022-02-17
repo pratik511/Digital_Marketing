@@ -8,6 +8,9 @@ import Verify from './screen/Verify';
 import Splash from './Splash';
 import TabScreen from './screen/TabScreen';
 import Frame from './screen/Frame';
+import Icon from 'react-native-vector-icons/Ionicons';
+import colors from './utils/colors';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -15,10 +18,11 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='Splash' component={Splash} options={{headerShown:false}} />
-        <Stack.Screen name='login' component={Login} options={{headerShown:false}}/>
-        <Stack.Screen name='verify' component={Verify} options={{headerShown:false}}/>
-        <Stack.Screen name='home' component={TabScreen} options={{headerShown:false}}/>
+        <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
+        <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
+        <Stack.Screen name='verify' component={Verify} options={{ headerShown: false }} />
+        <Stack.Screen name='tabscreen' component={TabScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Frame" component={Frame} options={{ headerShown: false }}   />
       </Stack.Navigator>
     </NavigationContainer>
   );
