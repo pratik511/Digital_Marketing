@@ -4,29 +4,28 @@ import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react
 import { img } from '../utils/Imgdata';
 
 const Flatlist = (props) => {
-    const { data, header } = props;
-    // console.warn(props);
+    const { data, header,view} = props;
+    console.warn("data",data);
     const renderItem = ({ item }) => {
         return (
             <View style={styles.Grig}>
-                <TouchableOpacity onPress={() => props.navigation.navigate('Frame',{id:item.id ,img:item.img})}>
+                <TouchableOpacity onPress={() => props.navigation.navigate('Frame',{id:item.id ,img:item.img, item : data})}>
                     <Image style={styles.tinyLogo} source={{ uri: item.img }} />
                 </TouchableOpacity>
             </View>
         );
     };
+    // console.warn(data)
     return (
-        <View>
-            <View style={{ flex: 1, backgroundColor: "black", height: 150 }}>
+            <View style={{  backgroundColor: "black", height: 150 }}>
                 <View style={{ flex: 1, display: 'flex', flexDirection: 'row', margin: 6, marginLeft: 10 }}>
                     <Text style={{ flex: 1, color: '#fff', fontWeight: "bold" }}>{header}</Text>
-                    <TouchableOpacity>
-                        <Text style={{ color: '#c4bfbe', fontWeight: "100", fontSize: 12 }}>{img.view}</Text>
+                    <TouchableOpacity onPress={() => props.navigation.navigate('Viewall',{itemdata:data})}>
+                        <Text style={{ color: '#c4bfbe', fontWeight: "100", fontSize: 12 }}>{view}</Text>
                     </TouchableOpacity>
                 </View>
-                <FlatList data={data} renderItem={renderItem} horizontal showsHorizontalScrollIndicator={false} style={{ height: 100, marginLeft: 12, marginRight: 12 }} />
+                <FlatList data={data} renderItem={renderItem} horizontal showsHorizontalScrollIndicator={false} style={{ height: 100, marginLeft: 12, marginRight: 12 ,bottom:0 }} />
             </View>
-        </View>
     );
 };
 

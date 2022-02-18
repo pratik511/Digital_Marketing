@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const Header = (props) => {
     const { inamel, title, inamer1, inamer2 } = props;
     const  goBack  = props.navigation;
-    console.warn(goBack);
+    // console.warn(goBack);
     return (
         <View style={{ height: 50, backgroundColor: colors.black }}>
 
