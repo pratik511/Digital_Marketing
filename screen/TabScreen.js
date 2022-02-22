@@ -7,14 +7,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../utils/colors';
 import Lable from '../utils/Lable';
 import Home from './Home';
+import Greeting from './Greeting';
+import Download from './Download';
+import Business from './Business';
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
 
 function SettingsScreen() {
   return (
@@ -50,7 +46,7 @@ const TabScreen = () => {
               return label = focused ? <Text style={{ color, fontSize: 15, marginBottom: 8, marginTop: 5 }}>{Lable.Home}</Text> : <Text style={{ color, fontSize: 13, marginBottom: 8, marginTop: 5 }}>{Lable.Home}</Text>
             case 'Greetings':
               return label = focused ? <Text style={{ color, fontSize: 15, marginBottom: 8, marginTop: 5 }}>{Lable.Greetings}</Text> : <Text style={{ color, fontSize: 13, marginBottom: 8, marginTop: 5 }}>{Lable.Greetings}</Text>
-            case 'Downlodes':
+            case 'Downlods':
               return label = focused ? <Text style={{ color, fontSize: 15, marginBottom: 8, marginTop: 5 }}>{Lable.Downlodes}</Text> : <Text style={{ color, fontSize: 13, marginBottom: 8, marginTop: 5 }}>{Lable.Downlodes}</Text>
             case 'Business':
               return label = focused ? <Text style={{ color, fontSize: 15, marginBottom: 8, marginTop: 5 }}>{Lable.Business}</Text> : <Text style={{ color, fontSize: 13, marginBottom: 8, marginTop: 5 }}>{Lable.Business}</Text>
@@ -71,9 +67,9 @@ const TabScreen = () => {
       }}
     >
       <Tab.Screen name='Home' component={HomeStackScreen}  options={{ headerShown: false, tabBarIcon: (({ color, focused }) => focused ? <Icon name="home-outline" size={23} style={{ color: color }} /> : <Icon name="home-outline" size={20} style={{ color: color }} />)  }} />
-      <Tab.Screen name='Greetings' component={HomeScreen} options={{ tabBarIcon: (({ color, focused }) => focused ? <Icon name="layers-outline" size={23} style={{ color: color }} /> : <Icon name="layers-outline" size={20} style={{ color: color }} />) }} />
-      <Tab.Screen name='Downlodes' component={SettingsScreen} options={{ tabBarIcon: (({ color, focused }) => focused ? <Icon name="download-outline" size={23} style={{ color: color }} /> : <Icon name="download-outline" size={20} style={{ color: color }} />) }} />
-      <Tab.Screen name='Business' component={SettingsScreen} options={{ tabBarIcon: (({ color, focused }) => focused ? <Icon name="briefcase-outline" size={23} style={{ color: color }} /> : <Icon name="briefcase-outline" size={20} style={{ color: color }} />) }} />
+      <Tab.Screen name='Greetings' component={Greeting} options={{ headerShown: false, tabBarIcon: (({ color, focused }) => focused ? <Icon name="layers-outline" size={23} style={{ color: color }} /> : <Icon name="layers-outline" size={20} style={{ color: color }} />) }} />
+      <Tab.Screen name='Downlods' component={Download} options={{  headerShown: false,tabBarIcon: (({ color, focused }) => focused ? <Icon name="download-outline" size={23} style={{ color: color }} /> : <Icon name="download-outline" size={20} style={{ color: color }} />) }} />
+      <Tab.Screen name='Business' component={Business} options={{ headerShown: false, tabBarIcon: (({ color, focused }) => focused ? <Icon name="briefcase-outline" size={23} style={{ color: color }} /> : <Icon name="briefcase-outline" size={20} style={{ color: color }} />) }} />
       <Tab.Screen name='Account' component={SettingsScreen} options={{ tabBarIcon: (({ color, focused }) => focused ? <Icon name="person-outline" size={23} style={{ color: color }} /> : <Icon name="person-outline" size={20} style={{ color: color }} />) }} />
     </Tab.Navigator>
   );

@@ -16,28 +16,13 @@ const Swiper1 = (props) => {
     // console.warn("itemssssss",categoryImage1);
     // console.warn("itemssssssidddd", id);
     // console.warn("itemssssssimggggg", categoryimg);
+    // console.warn("props",props);
 
     return (
         <View style={{ flex: 1 }}>
             <Text style={{ color: colors.white }}>Hello</Text>
             <View style={{ backgroundColor: colors.white, width: width }}>
                 <Image style={{ width: width, height: height * 2 }} source={{ uri: categoryimg }} />
-                {/* <SwiperFlatList 
-                    data={categoryImage1}
-                    renderItem={({item}) => (
-                        <View>
-                            <Image style={{width:width ,height:height*2}} source={{ uri: item.img }} />
-                        </View>
-                    )}
-                /> */}
-                {/* {
-                    categoryImage1.map((item, index) => {
-                        // console.warn(item)
-                        return (
-                            
-                            )
-                        })
-                    } */}
             </View>
             <Viewall />
         </View>
@@ -47,3 +32,20 @@ const Swiper1 = (props) => {
 export default Swiper1;
 
 const styles = StyleSheet.create({});
+
+{/* <SwiperFlatList 
+    data={categoryImage1}
+    renderItem={({item}) => (
+        <View>
+            <Image style={{width:width ,height:height*2}} source={{ uri: item.img }} />
+        </View>
+    )}
+/> */}
+{/* {
+    categoryImage1.map((item, index) => {
+        // console.warn(item)
+        return (
+            
+            )
+        })
+    } */}

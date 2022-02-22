@@ -1,33 +1,40 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Image, StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import Flatlist from '../components/Flatlist';
-import { img } from '../utils/Imgdata';
+import { Image, StyleSheet, Text, View, Dimensions, ScrollView, FlatList } from 'react-native';
 import Header from '../components/Header';
 import colors from '../utils/colors';
-import ImagesSwiper from 'react-native-image-swiper';
-import Swiper1 from '../components/Swiper1';
-import Viewall from '../components/Viewall';
+import Editior from '../components/Editior';
+import Eflatlist from '../components/Eflatlist';
+
 
 const { width } = Dimensions.get('window');
 const height = width * 0.50;
 
 const Frame = ({ route }) => {
-    const img1 = route.params.img;
-    const categoryImage = route.params.item;
-    const categoryid = route.params.id;
-    const categoryimg = route.params.img;
-    // console.warn("itemssssss",categoryimg);
+    const categoryImage = route.params.img;
+    // console.warn('itemssssss', categoryImage);
     // console.warn("itemssssss",categoryImage);
+
+    const renderItem = ({ item }) => {
+        // console.warn(item);
+        return (
+            <View>
+                <Image source={{ uri: item.img }} style={{ width: width, height: height * 2, backgroundColor: colors.yellow }} />
+            </View>
+        );
+    };
     return (
         <View style={{ backgroundColor: colors.black, width, height: height * 4 }}>
-            <Header inamel='chevron-back-outline' title='Edit Frame' inamer1="arrow-down-outline" inamer2='arrow-redo-outline' />
+            <Header inamel="chevron-back-outline" title="Edit Frame" inamer1="arrow-down-outline" inamer2="arrow-redo-outline" />
             <ScrollView>
+                <Eflatlist />
                 <View>
                     {/* <Flatlist data={img.image1} /> */}
                     <View style={{ top: height * 0.15, marginBottom: height * 0.15 }}>
-                        <Swiper1 categoryImage1={categoryImage} id={categoryid} categoryimg={categoryimg} />
+                        {/* <Swiper1 categoryImage1={categoryImage} id={categoryid} categoryimg={categoryimg} /> */}
+                        <FlatList data={categoryImage} renderItem={renderItem} horizontal={true} showsHorizontalScrollIndicator={false} />
                     </View>
+                    <Editior />
                 </View>
             </ScrollView>
         </View>
