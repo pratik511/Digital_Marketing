@@ -17,11 +17,10 @@ const Home = (props) => {
     <View style={{ backgroundColor: colors.black }}>
       <Header title="Home" inamer2="server-outline" {...props} />
       <ScrollView>
-        <View>
+        <View style={{marginBottom:50}}>
           {
             img && img.map((item) => {
               return (
-                
                 <>
                 {/* {console.warn("1",item)} */}
                   <Lable title={item.header} view={item.view} onPress={() => props.navigation.navigate('Viewall', { itemdata: item.image ,headername:item })} />

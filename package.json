@@ -10,12 +10,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/slider": "^3.0.3",
     "@react-navigation/bottom-tabs": "^6.2.0",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.0",
     "react": "17.0.2",
     "react-native": "0.67.2",
-    "react-native-image-picker": "^2.3.4",
+    "react-native-element-dropdown": "^1.7.1",
+    "react-native-image-crop-picker": "^0.37.3",
     "react-native-image-swiper": "^0.0.8",
     "react-native-paper": "^4.11.2",
     "react-native-safe-area-context": "^3.3.2",

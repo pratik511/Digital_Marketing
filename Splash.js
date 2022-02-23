@@ -13,7 +13,7 @@ const Splash = ({navigation}) => {
 
     useEffect(() =>{
         setTimeout(() =>{
-            navigation.navigate('login');
+            navigation.navigate('tabscreen');
         },2000);
     });
 

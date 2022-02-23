@@ -1,32 +1,38 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, StyleSheet, Text, View, Dimensions, ScrollView, FlatList } from 'react-native';
 import Header from '../components/Header';
 import colors from '../utils/colors';
-import Editior from '../components/Editior';
 import Eflatlist from '../components/Eflatlist';
-
+import Editior from '../components/Editior';
 
 const { width } = Dimensions.get('window');
 const height = width * 0.50;
 
 const Frame = ({ route }) => {
+    const [imageSource, setImageSource] = useState(null);
     const categoryImage = route.params.img;
     // console.warn('itemssssss', categoryImage);
     // console.warn("itemssssss",categoryImage);
+
 
     const renderItem = ({ item }) => {
         // console.warn(item);
         return (
             <View>
                 <Image source={{ uri: item.img }} style={{ width: width, height: height * 2, backgroundColor: colors.yellow }} />
+                {imageSource === null ?
+                    null
+                    : <Image source={{ uri: imageSource }} style={{ width: 400, height: 300 }} />
+                }
             </View>
         );
     };
     return (
         <View style={{ backgroundColor: colors.black, width, height: height * 4 }}>
             <Header inamel="chevron-back-outline" title="Edit Frame" inamer1="arrow-down-outline" inamer2="arrow-redo-outline" />
-            <ScrollView>
+            <ScrollView >
+                <View style={{marginBottom:200}}>
                 <Eflatlist />
                 <View>
                     {/* <Flatlist data={img.image1} /> */}
@@ -34,7 +40,8 @@ const Frame = ({ route }) => {
                         {/* <Swiper1 categoryImage1={categoryImage} id={categoryid} categoryimg={categoryimg} /> */}
                         <FlatList data={categoryImage} renderItem={renderItem} horizontal={true} showsHorizontalScrollIndicator={false} />
                     </View>
-                    <Editior />
+                    <Editior setImageSource={setImageSource} imageSource={imageSource} />
+                </View>
                 </View>
             </ScrollView>
         </View>
