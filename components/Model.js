@@ -10,7 +10,7 @@ const height = width * 0.50;
 const Model = (props) => {
     const [model, setModel] = useState(false);
     return (
-        <View>
+        <View style={{justifyContent:'flex-end'}}>
             <Modal transparent={true} visible={!model}>
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ backgroundColor: '#fff', padding: 20, width: width * 0.80, height: height * 2, borderRadius: 10 }}>

@@ -16,7 +16,7 @@ import { SelectCountry } from 'react-native-element-dropdown';
 const local_data = [
   {
     value: '1',
-    lable: 'Country 1'
+    lable: 'Country 1',
   },
   {
     value: '2',
