@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 
 const Header = (props) => {
-    const { inamel, title, inamer1, inamer2 } = props;
+    const { inamel, title, inamer1, inamer2,preasename2 } = props;
     // console.warn("Header",props);
     // console.warn(goBack);
     return (
@@ -27,7 +27,7 @@ const Header = (props) => {
                         <TouchableOpacity>
                             <Icon name={inamer1} size={23} style={{ color: colors.white, right: 15 }} />
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={preasename2}>
                             <Icon name={inamer2} size={23} style={{ color: colors.white }} />
                         </TouchableOpacity>
                     </View>

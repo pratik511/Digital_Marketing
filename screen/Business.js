@@ -1,4 +1,8 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable jsx-quotes */
+/* eslint-disable quotes */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';

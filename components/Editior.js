@@ -1,4 +1,7 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable no-shadow */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-native/no-inline-styles */
 import React, { useEffect, useState } from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View, Alert, Image, Modal, SafeAreaView, FlatList, ScrollView } from 'react-native';
 import colors from '../utils/colors';
@@ -43,7 +46,7 @@ const Data = [
     // { id: 28, text: '' },
     // { id: 29, text: '' },
     // { id: 30, text: '' },
-]
+];
 
 const Editior = (props) => {
     const { imageSource, setImageSource } = props;
@@ -97,8 +100,8 @@ const Editior = (props) => {
     const renderItem = ({ item }) => {
         return (
             <View>
-                <TouchableOpacity style={{borderWidth:1,borderColor:colors.white ,margin:4 ,borderRadius:4 ,}}>
-                    <Text style={{ color: colors.white ,fontFamily:`${item.text}`,padding:5,width:width * 0.275 ,height:height *0.20 ,alignSelf:'center',justifyContent:'center'}}>Avenir</Text>
+                <TouchableOpacity style={{borderWidth:1,borderColor:colors.white ,margin:4 ,borderRadius:4 }}>
+                    <Text style={{ color: colors.white ,fontFamily:`${item.text}`,padding:5,width:width * 0.275 ,height:height * 0.20 ,alignSelf:'center',justifyContent:'center'}}>Avenir</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -184,7 +187,7 @@ const Editior = (props) => {
 
             <Modal transparent={true} visible={fontmodel}>
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end' }}>
-                    <View style={{ backgroundColor: colors.black, padding: 15, width: width, height: 270, borderRadius: 4,}}>
+                    <View style={{ backgroundColor: colors.black, padding: 15, width: width, height: 270, borderRadius: 4}}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             <Text style={{ fontSize: 17, color: colors.white }}>Select font style</Text>
                             <TouchableOpacity onPress={() => setFontmodel(!fontmodel)} style={{ backgroundColor: colors.black, justifyContent: 'center' }}>
