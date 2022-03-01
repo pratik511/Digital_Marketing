@@ -10,7 +10,7 @@ import Share from 'react-native-share';
 const { width } = Dimensions.get('window');
 const height = width * 0.50;
 
-const Frame = ({ route }) => {
+const Frame = ({ route},props) => {
     const [imageSource, setImageSource] = useState(null);
     const categoryImage = route.params.img;
     // console.warn('itemssssss', categoryImage);

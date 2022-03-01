@@ -19,6 +19,7 @@ import seting from './seting';
 import Slider from '@react-native-community/slider';
 import { SelectCountry } from 'react-native-element-dropdown';
 import DragTextEditor from 'react-native-drag-text-editor';
+import Account from './Account';
 const WINDOW = Dimensions.get('window');
 
 const TEXT = "Sample";
@@ -158,7 +159,7 @@ const TabScreen = () => {
       <Tab.Screen name="Greetings" component={Greeting} options={{ headerShown: false, tabBarIcon: (({ color, focused }) => focused ? <Icon name="layers-outline" size={23} style={{ color: color }} /> : <Icon name="layers-outline" size={20} style={{ color: color }} />) }} />
       <Tab.Screen name="Downlods" component={Download} options={{ headerShown: false, tabBarIcon: (({ color, focused }) => focused ? <Icon name="download-outline" size={23} style={{ color: color }} /> : <Icon name="download-outline" size={20} style={{ color: color }} />) }} />
       <Tab.Screen name="Business" component={Business} options={{ headerShown: false, tabBarIcon: (({ color, focused }) => focused ? <Icon name="briefcase-outline" size={23} style={{ color: color }} /> : <Icon name="briefcase-outline" size={20} style={{ color: color }} />) }} />
-      <Tab.Screen name="Account" component={seting} options={{ tabBarIcon: (({ color, focused }) => focused ? <Icon name="person-outline" size={23} style={{ color: color }} /> : <Icon name="person-outline" size={20} style={{ color: color }} />) }} />
+      <Tab.Screen name="Account" component={Account} options={{headerShown: false, tabBarIcon: (({ color, focused }) => focused ? <Icon name="person-outline" size={23} style={{ color: color }} /> : <Icon name="person-outline" size={20} style={{ color: color }} />) }} />
     </Tab.Navigator>
   );
 };

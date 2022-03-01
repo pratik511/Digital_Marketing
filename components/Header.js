@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 
 const Header = (props) => {
-    const { inamel, title, inamer1, inamer2,preasename2 } = props;
+    const { inamel, title, inamer1, inamer2,preasename2,rightname, isBack } = props;
     // console.warn("Header",props);
     // console.warn(goBack);
     return (
@@ -15,7 +15,7 @@ const Header = (props) => {
 
             <View style={styles.flexrow}>
                 <View style={styles.flexstart}>
-                    <TouchableOpacity onPress={() => props.navigation.navigate('Home')}>
+                    <TouchableOpacity onPress={isBack}>
                         <Icon name={inamel} size={23} style={{ color: colors.white }} />
                     </TouchableOpacity>
                 </View>
@@ -26,6 +26,7 @@ const Header = (props) => {
                     <View style={styles.flexrow}>
                         <TouchableOpacity>
                             <Icon name={inamer1} size={23} style={{ color: colors.white, right: 15 }} />
+                            <Text style={{color:colors.yellow,fontSize:20}}>{rightname}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={preasename2}>
                             <Icon name={inamer2} size={23} style={{ color: colors.white }} />

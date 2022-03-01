@@ -11,6 +11,7 @@ import Frame from './screen/Frame';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from './utils/colors';
 import Viewall from './components/Viewall';
+import Contactus from './screen/Contactus';
 
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +26,7 @@ const App = () => {
         <Stack.Screen name='tabscreen' component={TabScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Frame" component={Frame} options={{ headerShown: false }}   />
         <Stack.Screen name="Viewall" component={Viewall} options={{ headerShown: false }}   />
+        <Stack.Screen name="ContactUs" component={Contactus} options={{ headerShown: false }}   />
       </Stack.Navigator>
     </NavigationContainer>
   );

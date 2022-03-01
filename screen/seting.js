@@ -16,9 +16,10 @@ const seting = () => {
   const [defaultLabel, setdefaultLabel] = useState('5454');
   useEffect(() => {
     console.log('Heloooooooooooooooo');
-    // console.warn('textID',textID);
+    console.warn('textID',textID);
     addText();
   }, []);
+  console.log("textID",textID);
   function addText() {
     console.log('Hello');
     setTextID(textID + 1);
